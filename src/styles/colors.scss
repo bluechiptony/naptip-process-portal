@@ -5,6 +5,8 @@ $darkGreen: #126c20;
 $lightGreen: #8ed549;
 $lightGreenText: #5d7645;
 
+$bgGrey: #f7f8fb;
+
 $errorRed: #ba0b0b;
 
 .text-white {
@@ -20,6 +22,10 @@ $errorRed: #ba0b0b;
 
 .text-light-blue {
   color: $lightBlue;
+}
+
+.bg-backdrop {
+  background-color: $bgGrey;
 }
 
 .bg-white {

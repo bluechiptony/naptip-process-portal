@@ -175,3 +175,11 @@
   font-weight: bold;
   color: $lightGreenText;
 }
+
+.overview-box {
+  box-sizing: border-box;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px 0 rgba($color: #000000, $alpha: 0.04);
+  margin-bottom: 30px;
+}

@@ -3,13 +3,17 @@ import { CommonModule } from '@angular/common';
 
 import { ReportRoutingModule } from './report-routing.module';
 import { ReportComponent } from './report.component';
-
+import { MatDependenciesModule } from '../shared/mat-dependencies/mat-dependencies.module';
+import { FormDependenciesModule } from '../shared/form-dependencies/form-dependencies.module';
+import { ReportTableComponent } from '../tables/report-table/report-table.component';
 
 @NgModule({
-  declarations: [ReportComponent],
+  declarations: [ReportComponent, ReportTableComponent],
   imports: [
     CommonModule,
-    ReportRoutingModule
-  ]
+    ReportRoutingModule,
+    MatDependenciesModule,
+    FormDependenciesModule,
+  ],
 })
-export class ReportModule { }
+export class ReportModule {}
