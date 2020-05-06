@@ -72,3 +72,106 @@
   transition: all 0.3s ease-in-out;
   z-index: 1;
 }
+
+.app-button:hover {
+  &.bg-dark-green {
+    background-color: darken($color: #4caf50, $amount: 10);
+  }
+}
+
+.input-text {
+  display: block;
+  font-size: 1rem;
+  padding: 11px 10px;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  // padding: 10px 10px;
+  // border-width: 0.03px;
+  transition: all 0.3s ease-in-out;
+}
+.input-text:focus {
+  border: 0.03px solid $darkGreen;
+}
+
+.login-box {
+  box-sizing: border-box;
+  border-radius: 0.3rem;
+  padding: 2rem 1.5rem;
+}
+
+@keyframes buttonSlideAnimation {
+  0% {
+    transform: scaleX(0);
+  }
+  25% {
+    transform: scaleX(0.25);
+  }
+  50% {
+    transform: scaleX(0.5);
+  }
+  75% {
+    transform: scaleX(0.75);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.anim-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  background-color: #3f9b42;
+
+  overflow: hidden;
+  z-index: -1;
+  transform: scaleX(0);
+  animation-name: buttonSlideAnimation;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  transform-origin: left;
+}
+
+.load-hide {
+  opacity: 0;
+}
+
+.status-pill {
+  display: inline;
+  border-radius: 0.2rem;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}
+
+.status-true {
+  background-color: $lightGreen;
+}
+
+.status-false {
+  background-color: $errorRed;
+}
+
+.category-box {
+  border-radius: 0.4rem;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  cursor: pointer;
+  @include appTransition();
+}
+
+.category-box:hover {
+  box-shadow: 0 0 20px 0 #5e5e5e22;
+}
+.card-main {
+  font-weight: bold;
+  color: $lightGreenText;
+}

@@ -50,6 +50,11 @@ const routes: Routes = [
             (m) => m.OrganizationModule
           ),
       },
+      {
+        path: 'projects',
+        loadChildren: () =>
+          import('../project/project.module').then((m) => m.ProjectModule),
+      },
     ],
   },
 ];
