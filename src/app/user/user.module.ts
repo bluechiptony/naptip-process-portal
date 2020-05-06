@@ -6,6 +6,7 @@ import { UserComponent } from './user.component';
 import { MatDependenciesModule } from '../shared/mat-dependencies/mat-dependencies.module';
 import { FormDependenciesModule } from '../shared/form-dependencies/form-dependencies.module';
 import { UserTableComponent } from '../tables/user-table/user-table.component';
+import { UserService } from './user-service.service';
 
 @NgModule({
   declarations: [UserComponent, UserTableComponent],
@@ -15,5 +16,6 @@ import { UserTableComponent } from '../tables/user-table/user-table.component';
     MatDependenciesModule,
     FormDependenciesModule,
   ],
+  providers: [UserService],
 })
 export class UserModule {}

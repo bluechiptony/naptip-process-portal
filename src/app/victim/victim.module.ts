@@ -6,6 +6,7 @@ import { VictimComponent } from './victim.component';
 import { MatDependenciesModule } from '../shared/mat-dependencies/mat-dependencies.module';
 import { FormDependenciesModule } from '../shared/form-dependencies/form-dependencies.module';
 import { VictimTableComponent } from '../tables/victim-table/victim-table.component';
+import { VictimService } from './victim-service.service';
 
 @NgModule({
   declarations: [VictimComponent, VictimTableComponent],
@@ -15,5 +16,6 @@ import { VictimTableComponent } from '../tables/victim-table/victim-table.compon
     MatDependenciesModule,
     FormDependenciesModule,
   ],
+  providers: [VictimService],
 })
 export class VictimModule {}

@@ -17,10 +17,24 @@
       </div>
       <div class="sub-menu">
         <ul class="sub-list">
-          <li class="sub-list-item">
+          <li
+            class="sub-list-item"
+            [routerLink]="['organizations']"
+            routerLinkActive="router-link-active"
+          >
             <span>Zonal Commands</span>
           </li>
         </ul>
+      </div>
+    </li>
+    <li
+      class="nav-item"
+      [routerLink]="['memos']"
+      routerLinkActive="router-link-active"
+    >
+      <div class="list-menu">
+        <i class="uil uil-dashboard"></i>
+        <span class="nav-text">Memos</span>
       </div>
     </li>
     <li class="nav-item">
@@ -32,24 +46,17 @@
         <ul class="sub-list">
           <li
             class="sub-list-item"
-            [routerLink]="['consult', 'categories']"
+            [routerLink]="['cases', 'list']"
             routerLinkActive="router-link-active"
           >
             <span>Case List</span>
           </li>
           <li
             class="sub-list-item"
-            [routerLink]="['consult', 'services']"
+            [routerLink]="['cases', 'categories']"
             routerLinkActive="router-link-active"
           >
             <span>Case Types</span>
-          </li>
-          <li
-            class="sub-list-item"
-            [routerLink]="['dispensary', 'categories']"
-            routerLinkActive="router-link-active"
-          >
-            <span>Offenders</span>
           </li>
         </ul>
       </div>
@@ -64,24 +71,24 @@
         <ul class="sub-list">
           <li
             class="sub-list-item"
-            [routerLink]="['consult', 'categories']"
+            [routerLink]="['reports', 'general']"
+            routerLinkActive="router-link-active"
+          >
+            <span>General</span>
+          </li>
+          <li
+            class="sub-list-item"
+            [routerLink]="['reports', 'incidents']"
             routerLinkActive="router-link-active"
           >
             <span>Incidents</span>
           </li>
           <li
             class="sub-list-item"
-            [routerLink]="['consult', 'services']"
+            [routerLink]="['reports', 'rescues']"
             routerLinkActive="router-link-active"
           >
             <span>Rescues</span>
-          </li>
-          <li
-            class="sub-list-item"
-            [routerLink]="['dispensary', 'categories']"
-            routerLinkActive="router-link-active"
-          >
-            <span>Offenders</span>
           </li>
         </ul>
       </div>
@@ -95,14 +102,14 @@
         <ul class="sub-list">
           <li
             class="sub-list-item"
-            [routerLink]="['consult', 'categories']"
+            [routerLink]="['victims']"
             routerLinkActive="router-link-active"
           >
             <span>Victims</span>
           </li>
           <li
             class="sub-list-item"
-            [routerLink]="['consult', 'services']"
+            [routerLink]="['suspects']"
             routerLinkActive="router-link-active"
           >
             <span>Suspects</span>
@@ -120,7 +127,7 @@
     <li class="nav-item">
       <div
         class="list-menu"
-        [routerLink]="['beneficiaries']"
+        [routerLink]="['projects']"
         routerLinkActive="router-link-active"
       >
         <i class="uil uil-user-square"></i>
@@ -171,7 +178,7 @@
       <span><i class="uil uil-user-circle profile-name"></i></span>
     </span>
   </div>
-  <div class="">
+  <div class="top-padding">
     <router-outlet></router-outlet>
   </div>
 </main>

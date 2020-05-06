@@ -54,7 +54,7 @@
 .nav-item {
   width: 100%;
   background-color: transparent;
-  transition: background-color 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
   font-family: "Montserrat";
   .sub-menu {
     display: none;
@@ -63,6 +63,8 @@
     overflow: hidden;
     transition: all 200ms ease-in-out;
     .sub-list-item {
+      font-size: 0.9rem;
+      font-weight: 500;
       opacity: 1;
       transition: all 200ms ease-in-out;
     }
@@ -82,6 +84,10 @@
   height: 3.5rem;
 }
 
+.sub-list-item {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
 .nav-text {
   margin-left: 1rem;
   transition: display 200ms ease-in-out;
@@ -118,6 +124,8 @@
     opacity: 1;
     background-color: #114372;
     .sub-list-item {
+      font-size: 0.9rem;
+      font-weight: 500;
       opacity: 1;
       padding: 1rem 0;
       overflow: hidden;
@@ -131,5 +139,5 @@
 }
 
 .router-link-active {
-  color: #107bdf;
+  color: #f0f014;
 }
