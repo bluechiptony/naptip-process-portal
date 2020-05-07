@@ -13,8 +13,8 @@ node {
 
     }
 
-    stage('deploy'){
-        sh './scripts/deploy.sh'
-    }
+    // stage('deploy'){
+    //     sh './scripts/deploy.sh'
+    // }
 
 }
