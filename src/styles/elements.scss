@@ -2,7 +2,7 @@
 @import "animations";
 
 .full-page-height {
-  height: 100vh;
+  min-height: 100vh;
 }
 .full-width {
   width: 100%;
@@ -37,6 +37,11 @@
 
 .top-padding {
   padding-top: 1.5rem;
+}
+
+.vert-padding {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 .vertical-padding-bottom {
   padding: 5px 0 25px 0;
@@ -74,8 +79,8 @@
 }
 
 .app-button:hover {
-  &.bg-dark-green {
-    background-color: darken($color: #4caf50, $amount: 10);
+  &.bg-dark-blue {
+    background-color: darken($color: $darkBlue, $amount: 10);
   }
 }
 
@@ -88,10 +93,11 @@
   width: 100%;
   // padding: 10px 10px;
   // border-width: 0.03px;
+  border: 0.03px solid #e3e3e3;
   transition: all 0.3s ease-in-out;
 }
 .input-text:focus {
-  border: 0.03px solid $darkGreen;
+  border: 0.03px solid $darkBlue;
 }
 
 .login-box {
@@ -182,4 +188,63 @@
   border-radius: 0.5rem;
   box-shadow: 0 0 20px 0 rgba($color: #000000, $alpha: 0.04);
   margin-bottom: 30px;
+  position: relative;
+  .overview-icon {
+    font-size: 7rem;
+    opacity: 0.1;
+    position: absolute;
+    top: 30px;
+  }
+}
+
+.two-column-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+}
+.three-column-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.three-column-grid-nogap {
+  display: grid;
+  gap: 0px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+div.three-grid div:nth-child(2) {
+  border-left: 1px solid #e3e3e3;
+  border-right: 1px solid #e3e3e3;
+}
+
+.three-grid {
+  div {
+    box-sizing: border-box;
+    padding: 2rem 0;
+  }
+}
+
+div.overview-content div.overview-list-box {
+  border-bottom: 1px solid #e3e3e3;
+  padding: 0.5rem 1rem;
+}
+
+div.overview-content div.overview-list-box:last-child {
+  border-bottom: 0;
+}
+
+.overview-list-box {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.overview-list-box:hover {
+  background-color: #0a223919;
+}
+
+.table-filter-grid {
+  display: grid;
+  grid-template-columns: auto 300px 250px;
+  gap: 20px;
 }

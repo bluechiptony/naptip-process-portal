@@ -1,0 +1,17 @@
+div.overview-content div.overview-list-box {
+  border-bottom: 1px solid #e3e3e3;
+  padding: 0.5rem 1rem;
+}
+
+div.overview-content div.overview-list-box:last-child {
+  border-bottom: 0;
+}
+
+.overview-list-box {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.overview-list-box:hover {
+  background-color: #0a223919;
+}

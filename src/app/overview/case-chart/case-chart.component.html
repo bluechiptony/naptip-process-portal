@@ -1,6 +1,30 @@
 <div class="container-fluid overview-box bg-white">
   <div class="overview-header">
-    <span class="notice-heading">Case data analysis</span>
+    <span class="notice-heading text-light-blue">Case data analysis</span>
   </div>
-  <div class="overview-content"></div>
+  <div class="overview-content">
+    <div
+      class="chart-content top-padding"
+      #chartContent
+      style="min-height: 350px;"
+    >
+      <ngx-charts-line-chart
+        *ngIf="loaded"
+        [scheme]="colorScheme"
+        [legend]="legend"
+        [showXAxisLabel]="showXAxisLabel"
+        [showYAxisLabel]="showYAxisLabel"
+        [xAxis]="xAxis"
+        [yAxis]="yAxis"
+        [xAxisLabel]="xAxisLabel"
+        [yAxisLabel]="yAxisLabel"
+        [timeline]="timeline"
+        [results]="chartData"
+        (select)="onSelect($event)"
+        (activate)="onActivate($event)"
+        (deactivate)="onDeactivate($event)"
+      >
+      </ngx-charts-line-chart>
+    </div>
+  </div>
 </div>

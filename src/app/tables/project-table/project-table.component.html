@@ -1,12 +1,22 @@
 <div class="table-container bg-white">
   <div *ngIf="!loading">
     <!-- Table Data Start -->
-    <!-- 
-        <div>
-          <button class="app-button uppercase bg-dark-green text-white pull-right">
-            Add Item
-          </button>
-        </div> -->
+    <div class="table-filter-grid vert-padding">
+      <div></div>
+      <div>
+        <input
+          type="text"
+          class="input-text full-width"
+          placeholder="Search for project"
+        />
+      </div>
+      <div>
+        <button class="app-button uppercase bg-dark-blue text-white pull-right">
+          Create Project
+        </button>
+      </div>
+      <span class="clearfix"></span>
+    </div>
 
     <div
       class="table-height table-data-container"

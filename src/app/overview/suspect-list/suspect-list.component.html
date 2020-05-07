@@ -1,6 +1,22 @@
 <div class="container-fluid overview-box bg-white">
   <div class="overview-header">
-    <span class="notice-heading">Suspected persons</span>
+    <span class="notice-heading heading-color text-light-blue"
+      >Suspected Persons</span
+    >
+    <hr />
   </div>
-  <div class="overview-content"></div>
+  <div class="overview-content">
+    <div class="overview-list-box" *ngFor="let memo of memos">
+      <div>
+        <span class="notice-heading">{{ memo.title }}</span>
+      </div>
+      <div>
+        <span class="subtitle">{{ memo.date | date: "mediumDate" }}</span>
+        <span class="pull-right">
+          <i class="uil uil-book-open"></i>
+        </span>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
 </div>
