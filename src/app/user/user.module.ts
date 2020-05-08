@@ -19,3 +19,17 @@ import { UserService } from './user-service.service';
   providers: [UserService],
 })
 export class UserModule {}
+
+export interface User {
+  code: string;
+  firstName?: string;
+  lastName?: string;
+  phoneNumber?: string;
+  emailAddress?: string;
+  sex: string;
+  command: string;
+  department: string;
+  state: string;
+  lga: string;
+  dateCreated: Date;
+}

@@ -1,0 +1,92 @@
+<div class="container-fluid">
+  <div class="container-fluid overview-box bg-white">
+    <div class="overview-header">
+      <div class="table-filter-grid vert-padding">
+        <div>
+          <span class="notice-heading">Create Case</span>
+        </div>
+        <div></div>
+        <div>
+          <button
+            class="app-button uppercase bg-dark-blue text-white pull-right"
+            (click)="showSuccess()"
+          >
+            Save Case
+          </button>
+        </div>
+        <span class="clearfix"></span>
+      </div>
+    </div>
+    <div class="overview-content">
+      <div class="three-column-grid">
+        <!-- Start column 1 -->
+        <div>
+          <div class="app-form-row">
+            <span class="notice-heading">Case details</span>
+          </div>
+          <div class="app-form-row">
+            <span class="app-form-prompt">Select case type</span>
+            <ng-select
+              class="block"
+              placeholder="Select Case type"
+              [items]="caseTypes"
+            >
+              <ng-option
+                *ngFor="let caseType of caseTypes"
+                [value]="caseType"
+                >{{ caseType }}</ng-option
+              >
+            </ng-select>
+          </div>
+          <div class="app-form-row">
+            <span class="app-form-prompt">Description</span>
+            <angular-editor [config]="editorConfig"></angular-editor>
+          </div>
+        </div>
+        <!-- End column 1 -->
+        <!-- Start column 2 -->
+        <div>
+          <div class="app-form-row">
+            <span class="notice-heading">Case Assignment</span>
+          </div>
+          <div class="app-form-row">
+            <span class="app-form-prompt">Select Chief Officer</span>
+            <ng-select
+              class="block"
+              placeholder="Select Officer"
+              [items]="users"
+              bindLabel="fullName"
+              bindValue="code"
+            >
+              <!-- <ng-option *ngFor="let user of users" [value]="user"
+                >{{ user.firstName }} {{ user.lastName }}</ng-option
+              > -->
+            </ng-select>
+          </div>
+          <div class="app-form-row">
+            <span class="notice-heading">Case Victim (s)</span>
+          </div>
+          <div class="app-form-row">
+            <span class="app-form-prompt">Search For Victim</span>
+            <ng-select
+              class="block"
+              placeholder="Select Victim"
+              [items]="users"
+              bindLabel="fullName"
+              bindValue="code"
+            >
+              <ng-option *ngFor="let user of users" [value]="user"
+                >{{ user.firstName }} {{ user.lastName }}</ng-option
+              >
+            </ng-select>
+          </div>
+        </div>
+        <!-- End column 2-->
+        <!-- Start column 3 -->
+        <div></div>
+        <!-- End column 3 -->
+      </div>
+      <div></div>
+    </div>
+  </div>
+</div>

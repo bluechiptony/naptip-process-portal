@@ -19,3 +19,12 @@ import { OrganizationService } from './organization-service.service';
   providers: [OrganizationService],
 })
 export class OrganizationModule {}
+
+export interface Organization {
+  code: string;
+  name: string;
+  state: string;
+  lga: string;
+  contactPhone: string;
+  emailAddress: string;
+}

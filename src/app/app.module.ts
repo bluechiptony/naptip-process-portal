@@ -6,6 +6,12 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { DatePipe, CurrencyPipe } from '@angular/common';
+import { SharedService } from './shared/shared.service';
+import { ToastrModule } from 'ngx-toastr';
+import { VictimStatus } from './victim/victim.module';
+import { VictimService } from './victim/victim-service.service';
+import { ReportService } from './report/report-service.service';
+import { SuspectService } from './suspect/suspect-service.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,8 +20,16 @@ import { DatePipe, CurrencyPipe } from '@angular/common';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ToastrModule.forRoot({}),
   ],
-  providers: [DatePipe, CurrencyPipe],
+  providers: [
+    DatePipe,
+    CurrencyPipe,
+    SharedService,
+    VictimService,
+    ReportService,
+    SuspectService,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

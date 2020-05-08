@@ -1,41 +1,26 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { HttpClient } from '@angular/common/http';
+import { Suspect, SuspectStatus } from './suspect.module';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SuspectService {
-  assessments: any[] = [
+  assessments: any[] = [];
+
+  suspects: Suspect[] = [
     {
-      id: 72483,
-      invoiceNumber: '632436473',
-      revenueHead: 'Black Tax',
-      mdaName: 'Ministry of Lands and survey',
-      taxpayer: 'Hames Rodriguez',
-      total: 21334723,
-      balance: 23434,
-      dateIssued: 1587583768000,
-    },
-    {
-      id: 72483,
-      invoiceNumber: '632436473',
-      revenueHead: 'Black Tax',
-      mdaName: 'Ministry of Lands and survey',
-      taxpayer: 'Hames Rodriguez',
-      total: 21334723,
-      balance: 23434,
-      dateIssued: 1587583768000,
-    },
-    {
-      id: 72483,
-      invoiceNumber: '632436473',
-      revenueHead: 'Black Tax',
-      mdaName: 'Ministry of Lands and survey',
-      taxpayer: 'Hames Rodriguez',
-      total: 21334723,
-      balance: 23434,
-      dateIssued: 1587583768000,
+      code: 'VIC8932928',
+      firstName: 'Bode',
+      lastName: 'Thomas',
+      phoneNumber: '08039928872',
+      state: 'Imo',
+      lga: 'Owerri',
+      dateCreated: new Date(957385923000),
+      status: SuspectStatus.IN_CUSTODY,
+      sex: 'MALE',
+      dob: new Date(1050438723000),
     },
   ];
 
@@ -43,7 +28,7 @@ export class SuspectService {
 
   getServices = (): Observable<any[]> => {
     var ogs = Observable.create((observer) => {
-      observer.next(this.assessments);
+      observer.next(this.suspects);
     });
 
     return ogs;

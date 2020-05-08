@@ -4,7 +4,7 @@
 @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
 @import "~@ng-select/ng-select/themes/default.theme.css";
 @import "styles/bootstrap-grid.scss";
-// @import "~ngx-toastr/toastr";
+@import "~ngx-toastr/toastr";
 @import "styles/elements.scss";
 @import "styles/colors.scss";
 @import "styles/text.scss";
@@ -31,6 +31,9 @@ body::-webkit-scrollbar-thumb {
   background-color: #fff;
 }
 
+.angular-editor-textarea:focus {
+  outline: none;
+}
 html,
 body {
   height: 100%;
@@ -193,6 +196,13 @@ Dialog reset style
   color: #f2f2f2;
 }
 
+.toast-container .ngx-toastr {
+  box-shadow: 0 0 30px 0 #5252524a;
+  border: 3px solid #63636357;
+  border-radius: 8px;
+  color: #f2f2f2;
+}
+
 .toast-container .ngx-toastr:hover {
   box-shadow: 0 0 30px 0 #b0b0b04a;
   opacity: 1;
@@ -218,4 +228,10 @@ Dialog reset style
 
 .toast-close-button {
   color: #63636357;
+}
+
+.toast-bottom-center {
+  bottom: 0;
+  right: 0;
+  width: 100%;
 }

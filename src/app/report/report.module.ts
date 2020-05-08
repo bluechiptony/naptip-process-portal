@@ -7,15 +7,25 @@ import { MatDependenciesModule } from '../shared/mat-dependencies/mat-dependenci
 import { FormDependenciesModule } from '../shared/form-dependencies/form-dependencies.module';
 import { ReportTableComponent } from '../tables/report-table/report-table.component';
 import { ReportService } from './report-service.service';
+import { NewReportComponent } from './new-report/new-report.component';
 
 @NgModule({
-  declarations: [ReportComponent, ReportTableComponent],
+  declarations: [ReportComponent, ReportTableComponent, NewReportComponent],
   imports: [
     CommonModule,
     ReportRoutingModule,
     MatDependenciesModule,
     FormDependenciesModule,
   ],
-  providers: [ReportService],
+  providers: [],
 })
 export class ReportModule {}
+
+export interface Report {
+  code: string;
+  title: string;
+  caseNumber: string;
+  author: string;
+  reportType: string;
+  dateCreated: string;
+}

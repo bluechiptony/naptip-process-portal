@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MissingPersonsListComponent implements OnInit {
   memos: any[] = [
-    { id: 1, title: 'Memo to veran', status: true, date: 1588797123000 },
-    { id: 2, title: 'General memo', status: true, date: 1588797123000 },
-    { id: 3, title: 'Auditory Memo', status: true, date: 1588537923000 },
+    { id: 1, title: 'Mike Okon', status: true, date: 1588797123000 },
+    { id: 2, title: 'James Momoh', status: true, date: 1588797123000 },
+    { id: 3, title: 'Chinwe Igwe', status: true, date: 1588537923000 },
   ];
 
   constructor() {}

@@ -16,6 +16,27 @@ import { VictimService } from './victim-service.service';
     MatDependenciesModule,
     FormDependenciesModule,
   ],
-  providers: [VictimService],
+  providers: [],
 })
 export class VictimModule {}
+
+export enum VictimStatus {
+  MISSING = 'MISSING',
+  IN_CUSTUDY = 'IN CUSTODY',
+  OUT_OF_CUSTODY = 'OUR OF CUSTODY',
+  DECEASED = 'DECEASED',
+  HOSPITALIZED = 'HOSPITALIZED',
+}
+
+export interface Victim {
+  code: string;
+  firstName?: string;
+  lastName?: string;
+  phoneNumber?: string;
+  sex: string;
+  dob: Date;
+  state: string;
+  lga: string;
+  dateCreated: Date;
+  status: VictimStatus;
+}

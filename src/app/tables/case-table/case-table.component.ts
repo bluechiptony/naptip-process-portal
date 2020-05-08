@@ -16,6 +16,8 @@ export class CaseTableComponent implements OnInit {
     'userCode',
     'fullName',
     'emailAddress',
+    // 'victim',
+    'suspect',
     'phoneNumber',
     'accountType',
     'menuHolder',

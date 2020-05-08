@@ -18,8 +18,8 @@ export class DashboardComponent implements OnInit, OnDestroy {
   };
   authSubScription: Subscription;
   loggedInUser: User = {
-    firstName: 'James',
-    lastName: 'McAdoo',
+    firstName: 'Julie',
+    lastName: 'Okah-Donli',
   };
 
   constructor(private router: Router) {}

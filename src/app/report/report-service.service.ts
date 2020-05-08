@@ -6,36 +6,22 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class ReportService {
-  assessments: any[] = [
+  reports: any[] = [
     {
-      id: 72483,
-      invoiceNumber: '632436473',
-      revenueHead: 'Black Tax',
-      mdaName: 'Ministry of Lands and survey',
-      taxpayer: 'Hames Rodriguez',
-      total: 21334723,
-      balance: 23434,
-      dateIssued: 1587583768000,
+      code: 'MSI83248',
+      title: 'Report on activity',
+      caseNumber: 'TY3247323',
+      author: 'James Igondo',
+      reportType: 'ACTIVITY',
+      dateCreated: new Date(),
     },
     {
-      id: 72483,
-      invoiceNumber: '632436473',
-      revenueHead: 'Black Tax',
-      mdaName: 'Ministry of Lands and survey',
-      taxpayer: 'Hames Rodriguez',
-      total: 21334723,
-      balance: 23434,
-      dateIssued: 1587583768000,
-    },
-    {
-      id: 72483,
-      invoiceNumber: '632436473',
-      revenueHead: 'Black Tax',
-      mdaName: 'Ministry of Lands and survey',
-      taxpayer: 'Hames Rodriguez',
-      total: 21334723,
-      balance: 23434,
-      dateIssued: 1587583768000,
+      code: 'MSI83948',
+      title: 'Report of Incidence',
+      caseNumber: 'TY3247323',
+      author: 'Merryl Streep',
+      reportType: 'INCIDENT',
+      dateCreated: new Date(),
     },
   ];
 
@@ -43,7 +29,7 @@ export class ReportService {
 
   getServices = (): Observable<any[]> => {
     var ogs = Observable.create((observer) => {
-      observer.next(this.assessments);
+      observer.next(this.reports);
     });
 
     return ogs;

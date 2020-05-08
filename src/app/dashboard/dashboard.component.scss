@@ -5,7 +5,7 @@
   padding: 1rem;
 }
 .main-content-open {
-  margin-left: 18rem;
+  margin-left: 20rem;
   padding: 1rem;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .navbar-open {
-  width: 18rem;
+  width: 20rem;
   height: 100vh;
   position: fixed;
   background-color: $darkBlue;
@@ -89,7 +89,7 @@
   font-weight: bold;
 }
 .nav-text {
-  margin-left: 1rem;
+  // margin-left: 1rem;
   transition: display 200ms ease-in-out;
   font-weight: 600;
 }
@@ -101,7 +101,7 @@
 }
 
 .navbar:hover {
-  width: 18rem;
+  width: 20rem;
 }
 
 .navbar:hover .nav-text {
@@ -113,7 +113,7 @@
 }
 
 .navbar:hover .main-content {
-  margin-left: 18rem;
+  margin-left: 20rem;
 }
 
 .nav-item:hover {

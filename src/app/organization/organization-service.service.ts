@@ -1,41 +1,36 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/internal/Observable';
 import { HttpClient } from '@angular/common/http';
+import { Organization } from './organization.module';
 
 @Injectable({
   providedIn: 'root',
 })
 export class OrganizationService {
-  assessments: any[] = [
+  organizations: Organization[] = [
     {
-      id: 72483,
-      invoiceNumber: '632436473',
-      revenueHead: 'Black Tax',
-      mdaName: 'Ministry of Lands and survey',
-      taxpayer: 'Hames Rodriguez',
-      total: 21334723,
-      balance: 23434,
-      dateIssued: 1587583768000,
+      code: 'BHS3824',
+      name: 'Lagos zonal Office',
+      state: 'LAGOS',
+      lga: 'ETI OSA',
+      contactPhone: '08037443389',
+      emailAddress: 'lagos@naptip.gov.ng',
     },
     {
-      id: 72483,
-      invoiceNumber: '632436473',
-      revenueHead: 'Black Tax',
-      mdaName: 'Ministry of Lands and survey',
-      taxpayer: 'Hames Rodriguez',
-      total: 21334723,
-      balance: 23434,
-      dateIssued: 1587583768000,
+      code: 'NPT3824',
+      name: 'FCT Zonal Office',
+      state: 'Federal capital territory',
+      lga: 'ETI OSA',
+      contactPhone: '08037443389',
+      emailAddress: 'fct@naptip.gov.ng',
     },
     {
-      id: 72483,
-      invoiceNumber: '632436473',
-      revenueHead: 'Black Tax',
-      mdaName: 'Ministry of Lands and survey',
-      taxpayer: 'Hames Rodriguez',
-      total: 21334723,
-      balance: 23434,
-      dateIssued: 1587583768000,
+      code: 'N382403',
+      name: 'Port Hacourt zonal office',
+      state: 'Rivers',
+      lga: 'Port harcourt',
+      contactPhone: '08037443389',
+      emailAddress: 'phc@naptip.gov.ng',
     },
   ];
 
@@ -43,7 +38,7 @@ export class OrganizationService {
 
   getServices = (): Observable<any[]> => {
     var ogs = Observable.create((observer) => {
-      observer.next(this.assessments);
+      observer.next(this.organizations);
     });
 
     return ogs;

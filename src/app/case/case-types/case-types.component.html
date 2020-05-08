@@ -3,6 +3,12 @@
     <div class="overview-header">
       <span class="notice-heading">Case Categories</span>
     </div>
-    <div class="overview-content"></div>
+    <div class="overview-content three-column-grid top-padding">
+      <div class="case-type-box" *ngFor="let caseType of caseTypes">
+        <span class="case-type-text">
+          {{ caseType }}
+        </span>
+      </div>
+    </div>
   </div>
 </div>
